@@ -1,0 +1,3 @@
+[submodule "lib/cvector"]
+	path = lib/cvector
+	url = https://github.com/simonerolando98/cvector.git

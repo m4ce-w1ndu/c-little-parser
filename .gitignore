@@ -1,0 +1,7 @@
+.vscode/
+.vs/
+.idea/
+build/
+cmake-build-debug/
+*.vcxproj
+*.vcxproj.filters
