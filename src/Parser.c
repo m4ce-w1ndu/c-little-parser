@@ -97,8 +97,8 @@ Token next_token(const char* text)
 
 			/* Number case */
 			if (isdigit(c)) {
-				char value[256];
-                memset(value, 0, 256);
+				char value[TOK_LEN];
+                memset(value, 0, TOK_LEN);
 				int seen = 0;
 
 				int value_pos = 0;
@@ -118,7 +118,7 @@ Token next_token(const char* text)
 					memmove((void*)text, (void*)text + 1, strlen(text));
 				}
 				t.type = NUMBER;
-				strcpy(t.value, value);
+				strncpy(t.value, value, TOK_LEN);
 				return t;
 			}
 			t.type = EMPTY;
